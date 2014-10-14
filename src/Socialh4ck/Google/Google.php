@@ -122,14 +122,11 @@ class Google {
 	}
 	
 	/**
-     * GET Profile Plus
-	 * $userProfile = $oauth->people->get('me');
-	 * $emails = $userProfile->getEmails();
+     * Service Plus
      */
-	public function getProfilePlus() 
+	public function servicePlus() 
 	{
-		$oauth = new \Google_Service_Plus($this->client);
-		return $oauth->people->get('me');
+		return new \Google_Service_Plus($this->client);
 	}
 	
 	/**

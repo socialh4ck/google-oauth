@@ -32,7 +32,7 @@ return array(
     | your home page after a successful login
     |
     */
-    'redirectUri' => URL:to('/v1/oauths/google'), // URL:to('/') doesn't include the trailing slash
+    'redirectUri' => null, // URL:to('/') doesn't include the trailing slash
 
 	/*
 	|--------------------------------------------------------------------------
