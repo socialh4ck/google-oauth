@@ -47,7 +47,13 @@ class GoogleServiceProvider extends ServiceProvider {
 			$client->setAssertionCredentials(
 				new \Google_Auth_AssertionCredentials(
 					$app['config']->get('google::service_email'),
-					array('https://www.googleapis.com/auth/analytics.readonly'),
+					array(
+						'https://www.googleapis.com/auth/analytics',
+						'https://www.googleapis.com/auth/analytics.edit',
+						'https://www.googleapis.com/auth/analytics.manage.users',
+						'https://www.googleapis.com/auth/analytics.provision',
+						'https://www.googleapis.com/auth/analytics.readonly'
+					),
 					file_get_contents($app['config']->get('google::certificate_path'))
 				)
 			);
